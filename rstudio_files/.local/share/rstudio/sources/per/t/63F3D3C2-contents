@@ -1,0 +1,37 @@
+# install.packages("likert")
+install.packages("readxl")
+
+setwd("/home/rstudio/")
+library(readxl)
+bd <- read_excel("bd_Usabilidade.xlsx", sheet = "bd3")
+itens <- read_excel("bd_Usabilidade.xlsx", sheet = "itens")
+
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 3:12] <- lapply(bd[ , 3:12], function(x){ factor(x, 
+                                                       levels = c("0","1", "2", "3", "4", "5"),                                  
+                                                       labels = c("NS","DT", "D", "N", "C", "CT"))})
+
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[3:12] <- paste(names(bd)[3:12], itens$texto, sep="_")
+#======
+library(likert)
+#=========
+# Colunas que contém as respotas das questões
+lik <- likert(as.data.frame(bd[ , 3:12]))
+
+#Plota as figuras
+#O pacote espera que todas as variáveis sejam factor e utilizem a mesmma escala
+# Opção 1
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="5"))
+# Opção 2
+plot(lik, type = "heat", wrap = 60, text.size=2) + theme(axis.text.y = element_text( size="5"))
+
+#Compara opinião considerando diferentes tipos de deficiência (variável categ)
+lik2 <- likert(as.data.frame(bd[ , 3:5]), grouping = bd$categ)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+
+
+

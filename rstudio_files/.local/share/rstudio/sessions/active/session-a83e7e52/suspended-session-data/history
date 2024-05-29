@@ -1,0 +1,512 @@
+labels = c("NaoU","NadaU", "PoucU", "M", "U", "MuitU"))})
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+lik <- likert(as.data.frame(bd[ , 2:32]))
+liksexo <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="7"))
+lik <- likert(as.data.frame(bd[ , 2:32]))
+# install.packages("likert")
+install.packages("readxl")
+setwd("/home/rstudio/")
+library(readxl)
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("NaoU","NadaU", "PoucU", "M", "U", "MuitU"))})
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+install.packages("readxl")
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="7"))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+plot(lik, type = "heat", wrap = 60, text.size=2) + theme(axis.text.y = element_text( size="5"))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Nao Utilizou","NadaU", "PoucU", "M", "U", "MuitU"))})
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Nao Utilizou","NadaU", "PoucU", "M", "U", "MuitU"))})
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+#======
+library(likert)
+#=========
+# Colunas que contém as respotas das questões
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","NadaU", "PoucU", "M", "U", "MuitU"))})
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd <- read_excel("bd_Usabilidade.xlsx", sheet = "interacoes")
+install.packages("readxl")
+setwd("/home/rstudio/")
+library(readxl)
+install.packages("readxl")
+bd <- read_excel("bd_Usabilidade.xlsx", sheet = "interacoes")
+itens <- read_excel("bd_Usabilidade.xlsx", sheet = "itens_")
+bd[ , 6:33] <- lapply(bd[ , 6:33], function(x){ factor(x,
+levels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20","21","22","23","24","25","26","27","28"),
+labels = c("HIDE_ANNOTATIONS_BUTTON_CLICK_1_1","SHOW_ANNOTATIONS_BUTTON_CLICK_2_2","ZOOM_IN_BUTTON_CLICK_3_3","ZOOM_OUT_BUTTON_CLICK_4_4","RECTANGLE_BUTTON_CLICK_5_5","HIGLIGHT_BUTTON_CLICK_6_6","PIN_BUTTON_CLICK_7_7","STRIKEOUT_BUTTON_CLICK_8_8","TEXT_BUTTON_CLICK_9_9","PEN_BUTTON_CLICK_10_10","ENTER_FULLSCREEN_BUTTON_CLICK_11_11","EXIT_FULLSCREEN_BUTTON_CLICK_12_12","PREV_PAGE_BUTTON_CLICK_13_13","NEXT_PAGE_BUTTON_CLICK_14_14","DOWNLOAD_DOCUMENT_BUTTON_CLICK_15_15","DOWNLOAD_COMMENTS_BUTTON_CLICK_16_16","COMMENT_SUBMIT_BUTTON_CLICK_17_17","COMMENT_CANCEL_BUTTON_CLICK_18_18","QUESTION_CLOSE_BUTTON_CLICK_19_19","QUESTION_REOPEN_BUTTON_CLICK_20_20","COMMENT_LIKE_BUTTON_CLICK_21_21","COMMENT_EDIT_BUTTON_CLICK_22_22","COMMENT_EDIT_SUBMIT_BUTTON_CLICK_23_23","COMMENT_EDIT_CANCEL_BUTTON_CLICK_24_24","COMMENT_DELETE_BUTTON_CLICK_25_25","COMMENT_DELETE_MODAL_CONFIRM_BUTTON_CLICK_26_26","COMMENT_DELETE_MODAL_CANCEL_BUTTON_CLICK_27_27","HIDE_ANNOTATIONS_BUTTON_CLICK_1_1"))})
+names(bd)[6:33] <- paste(names(bd)[6:33], itens$texto, sep="_")
+library(likert)
+lik <- likert(as.data.frame(bd[ , 6,33]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="5"))
+plot(lik, type = "heat", wrap = 60, text.size=3.5) + theme(axis.text.y = element_text( size="8"))
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+#======
+library(likert)
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+plot(lik, type = "heat", wrap = 60, text.size=2) + theme(axis.text.y = element_text( size="5"))
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+bd[ , 2:32]
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+bd[ , 2:32]
+names(bd)[2:32]
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+library(likert)
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+plot(lik, type = "heat", wrap = 60, text.size=2) + theme(axis.text.y = element_text( size="5"))
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$idade)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik <- likert(as.data.frame(bd[ , 2:32]))
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$idade)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$idade)
+lik2
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x,
+levels = c("0","1", "2", "3", "4", "5"),
+labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+lik2 <- likert(as.data.frame(bd[ , 2:32]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik2 <- likert(as.data.frame(bd[ , 2:5]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+lik2 <- likert(as.data.frame(bd[ , 2:10]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+install.packages("readxl")
+setwd("/home/rstudio/")
+library(readxl)
+install.packages("readxl")
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "PII.Q1",
+ylab = "HIGLIGHT_BUTTON_CLICK")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "PII.Q1",
+ylab = "HIGLIGHT_BUTTON_CLICK",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+text(1:nrow(matriz_cor), 1:ncol(matriz_cor), round(matriz_cor, 2), cex = 0.8)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "zero",
+ylab = "HIGLIGHT_BUTTON_CLICK",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "PII.Q1",
+ylab = "HIGLIGHT_BUTTON_CLICK",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+print(text(1:nrow(matriz_cor), 1:ncol(matriz_cor), round(matriz_cor, 2), cex = 0.8))
+matriz_cor
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "PII.Q1",
+ylab = "HIGLIGHT_BUTTON_CLICK")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+matriz_cor
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(50),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(50),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(10),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações")
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+matriz_cor <- cor(dados)
+matriz_cor
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,  # Mostrar a chave de cores
+symkey = FALSE,  # Não simetrizar a chave de cores
+density.info = "none",  # Não mostrar histograma
+trace = "none",  # Não mostrar rastros de dendrogramas
+cellnote = matriz_cor,  # Adicionar valores nas células
+notecol = "black",  # Cor do texto dos valores
+cexCol = 0.8,  # Tamanho da fonte das colunas
+cexRow = 0.8,  # Tamanho da fonte das linhas
+margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+keysize = 1.0)  # Tamanho da chave de cores
+install.packages("gplots")
+library(gplots)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,  # Mostrar a chave de cores
+symkey = FALSE,  # Não simetrizar a chave de cores
+density.info = "none",  # Não mostrar histograma
+trace = "none",  # Não mostrar rastros de dendrogramas
+cellnote = matriz_cor,  # Adicionar valores nas células
+notecol = "black",  # Cor do texto dos valores
+cexCol = 0.8,  # Tamanho da fonte das colunas
+cexRow = 0.8,  # Tamanho da fonte das linhas
+margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+keysize = 1.0)  # Tamanho da chave de cores
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "avaliação",
+ylab = "número de interações",
+cexRow = 0.8,  # Tamanho da fonte para rótulos das linhas
+cexCol = 0.8)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,  # Mostrar a chave de cores
+symkey = FALSE,  # Não simetrizar a chave de cores
+density.info = "none",  # Não mostrar histograma
+trace = "none",  # Não mostrar rastros de dendrogramas
+cellnote = matriz_cor,  # Adicionar valores nas células
+notecol = "black",  # Cor do texto dos valores
+cexCol = 0.8,  # Tamanho da fonte das colunas
+cexRow = 0.8,  # Tamanho da fonte das linhas
+margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+keysize = 1.0)  # Tamanho da chave de cores
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,  # Mostrar a chave de cores
+symkey = FALSE,  # Não simetrizar a chave de cores
+density.info = "none",  # Não mostrar histograma
+trace = "none",  # Não mostrar rastros de dendrogramas
+cellnote = matriz_cor,  # Adicionar valores nas células
+notecol = "black",  # Cor do texto dos valores
+cexCol = 0.8,  # Tamanho da fonte das colunas
+cexRow = 0.8,  # Tamanho da fonte das linhas
+margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+keysize = 1.0)  # Tamanho da chave de cores
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,  # Mostrar a chave de cores
+symkey = FALSE,  # Não simetrizar a chave de cores
+density.info = "none",  # Não mostrar histograma
+trace = "none",  # Não mostrar rastros de dendrogramas
+cellnote = matriz_cor,  # Adicionar valores nas células
+notecol = "black",  # Cor do texto dos valores
+cexCol = 0.8,  # Tamanho da fonte das colunas
+cexRow = 0.8,  # Tamanho da fonte das linhas
+margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+keysize = 1.0)  # Tamanho da chave de cores
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+# Criar o gráfico de calor com valores formatados
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+# Criar o gráfico de calor com valores formatados
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+# Criar o gráfico de calor com valores formatados
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+matriz_cor <- cor(dados)
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+# Criar o gráfico de calor com valores formatados
+heatmap.2(matriz_cor,
+col = colorRampPalette(c("blue", "white", "red"))(100),
+main = "Matriz de Correlação",
+xlab = "Variáveis",
+ylab = "Variáveis",
+key = TRUE,
+symkey = FALSE,
+density.info = "none",
+trace = "none",
+cellnote = matriz_cor_format,  # Usar os valores formatados
+notecol = "black",
+cexCol = 0.8,
+cexRow = 0.8,
+margins = c(12, 9),
+keysize = 1.0)
+participantes <- read.csv("/home/rstudio/participantes.csv")
+participantes <- read.csv("/home/rstudio/participantes.csv")
+colunas_selecionadas <- c("Q1",	"Q2",	"Q3",	"Q4",	"Q5",	"Q6",	"Q7",	"Q8",	"Q9",	"Q10")
+dados_selecionados <- participantes[, colunas_selecionadas]
+calcula_coeficiente_sus <- function(linha) {
+soma_dos_items <- 0
+questao = 0
+for (item in linha) {
+questao = questao + 1
+numeric_item <- as.numeric(item)  # Convertendo para número
+if (numeric_item > 0) {
+if (!is.na(numeric_item)) {  # Verifica se a conversão foi bem-sucedida
+if (questao %% 2 == 0) {
+numeric_item = abs(numeric_item - 5)
+} else {
+numeric_item = numeric_item - 1
+}
+soma_dos_items <- soma_dos_items + numeric_item
+}
+}
+}
+soma_dos_items <- soma_dos_items * 2.5
+return(soma_dos_items)
+}
+resultado <- apply(dados_selecionados[1, ], 1, calcula_coeficiente_sus)
+num_linhas <- nrow(dados_selecionados)
+resultados <- numeric(70)
+for (i in 1:num_linhas) {
+linha_atual <- dados_selecionados[i, ]
+resultado <- calcula_coeficiente_sus(linha_atual)
+print(resultado)
+resultados[i] <- resultado
+}

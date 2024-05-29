@@ -1,0 +1,87 @@
+# install.packages("likert")
+install.packages("readxl")
+
+setwd("/home/rstudio/")
+library(readxl)
+bd <- read_excel("parteii.xlsx", sheet = "dados_prontos")
+itens <- read_excel("parteii.xlsx", sheet = "itens")
+
+#---- ORGANIZA O BANCO DE DADOS
+# Transforma em factor
+# Colunas que contém as respotas das questões
+bd[ , 2:32] <- lapply(bd[ , 2:32], function(x){ factor(x, 
+                                                       levels = c("0","1", "2", "3", "4", "5"),                                  
+                                                       labels = c("Não Utilizou","Nada Útil", "Pouco Útil", "Médio", "Útil", "Muito Útil"))})
+
+# Muda os nomes das variáveis
+# Colunas que contém as respotas das questões
+names(bd)[2:32] <- paste(names(bd)[2:32], itens$texto, sep="_")
+#======
+library(likert)
+#=========
+# Colunas que contém as respotas das questões
+lik <- likert(as.data.frame(bd[ , 2:32]))
+liksexo <- likert(as.data.frame(bd[ , 2:32]))
+#Plota as figuras
+#O pacote espera que todas as variáveis sejam factor e utilizem a mesmma escala
+# Opção 1
+plot(lik, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+# Opção 2
+plot(lik, type = "heat", wrap = 60, text.size=2) + theme(axis.text.y = element_text( size="5"))
+
+#Compara opinião considerando diferentes tipos de deficiência (variável categ)
+lik2 <- likert(as.data.frame(bd[ , 2:10]), grouping = bd$sexo)
+lik2 <- likert(as.data.frame(bd[ , 3:5]), grouping = bd$sexo)
+plot(lik2, wrap = 60, text.size=3) + theme(axis.text.y = element_text(size="6"))
+
+
+
+
+install.packages("gplots")
+library(gplots)
+
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+
+matriz_cor <- cor(dados)
+
+
+heatmap.2(matriz_cor,
+          col = colorRampPalette(c("blue", "white", "red"))(100),
+          main = "Matriz de Correlação",
+          xlab = "Variáveis",
+          ylab = "Variáveis",
+          key = TRUE,  # Mostrar a chave de cores
+          symkey = FALSE,  # Não simetrizar a chave de cores
+          density.info = "none",  # Não mostrar histograma
+          trace = "none",  # Não mostrar rastros de dendrogramas
+          cellnote = matriz_cor,  # Adicionar valores nas células
+          notecol = "black",  # Cor do texto dos valores
+          cexCol = 0.8,  # Tamanho da fonte das colunas
+          cexRow = 0.8,  # Tamanho da fonte das linhas
+          margins = c(12, 9),  # Ajustar margens para acomodar os rótulos
+          keysize = 1.0)  # Tamanho da chave de cores
+
+
+
+dados <- read_excel("parteii.xlsx", sheet = "correlacao")
+
+matriz_cor <- cor(dados)
+
+matriz_cor_format <- formatC(matriz_cor, format = "f", digits = 2)
+
+# Criar o gráfico de calor com valores formatados
+heatmap.2(matriz_cor,
+          col = colorRampPalette(c("blue", "white", "red"))(100),
+          main = "Matriz de Correlação",
+          xlab = "Variáveis",
+          ylab = "Variáveis",
+          key = TRUE,
+          symkey = FALSE,
+          density.info = "none",
+          trace = "none",
+          cellnote = matriz_cor_format,  # Usar os valores formatados
+          notecol = "black",
+          cexCol = 0.8,
+          cexRow = 0.8,
+          margins = c(12, 9),
+          keysize = 1.0)

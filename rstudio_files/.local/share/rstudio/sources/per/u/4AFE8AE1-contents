@@ -1,0 +1,75 @@
+participantes_de_23_a_29 <- c("P2","P8","P9","P22","P23","P29","P30","P32","P33","P39","P48","P63","P67")
+de_23_a_29_mouse_movement <- c(0,2,0,0,2,2,13,2,0,0,0,4,3)
+
+dfmouse_movement_de_23_a_29 <- data.frame(de_23_a_29_mouse_movement, row.names = participantes_de_23_a_29)
+dfmouse_movement_de_23_a_29
+
+
+mean(dfmouse_movement_de_23_a_29$de_23_a_29)
+sd(dfmouse_movement_de_23_a_29$de_23_a_29)
+
+
+participantes_de_30_a_39 <-c('P1','P4','P6','P10','P11','P13','P15','P17','P18','P25','P26','P27','P35','P36','P38','P41','P45','P46','P47','P52','P53','P57','P58','P61','P64','P65')
+de_30_a_39_mouse_movement <- c(6,8,0,1,1,1,5,4,11,4,8,2,2,1,3,0,2,10,2,3,0,6,6,1,11,0)
+dfmouse_movement_de_30_a_39 <- data.frame(de_30_a_39_mouse_movement, row.names = participantes_de_30_a_39)
+mean(dfmouse_movement_de_30_a_39$de_30_a_39)
+sd(dfmouse_movement_de_30_a_39$de_30_a_39)
+
+participantes_de_40_a_49 <- c('P7','P16','P19','P20','P24','P28','P34','P37','P40','P42','P43','P44','P49','P51','P54','P55','P56','P60','P68','P69','P70')
+de_40_a_49_mouse_movement <- c(5,8,4,3,0,1,0,2,3,4,6,1,9,0,7,8,0,3,0,7,5)
+dfmouse_movement_de_40_a_49 <- data.frame(de_40_a_49_mouse_movement, row.names = participantes_de_40_a_49)
+
+mean(dfmouse_movement_de_40_a_49$de_40_a_49)
+sd(dfmouse_movement_de_40_a_49$de_40_a_49)
+
+participantes_de_50_a_59 <- c('P3','P14','P21','P31','P50','P66')
+de_50_a_59_mouse_moviment <- c(5,4,0,9,0,0)
+dfmouse_moviment_de_50_a_59 <- data.frame(de_50_a_59_mouse_moviment, row.names = participantes_de_50_a_59)
+
+mean(dfmouse_moviment_de_50_a_59$de_50_a_59)
+sd(dfmouse_moviment_de_50_a_59$de_50_a_59)
+
+participantes_de_60_a_67 <- c('P5','P12','P59','P62')
+de_60_a_67_mouse_movement <- c(4,0,11,10)
+dfmouse_movement_de_60_a_67 <- data.frame(de_60_a_67_mouse_movement, row.names = participantes_de_60_a_67)
+
+mean(dfmouse_movement_de_60_a_67$de_60_a_67)
+sd(dfmouse_movement_de_60_a_67$de_60_a_67)
+
+
+participantes_mulheres <- c('P1','P2','P3','P4','P5','P6','P8','P9','P14','P15','P16','P17','P18','P19','P20','P21','P22','P23','P25','P26','P27','P33','P36','P37','P39','P40','P41','P43','P44','P45','P46','P47','P48','P49','P51','P53','P54','P55','P56','P59','P60','P61','P62','P63')
+mulheres_mouse <- c(6,0,5,8,4,0,2,0,4,5,8,4,11,4,3,0,0,2,4,8,2,0,1,2,0,3,0,6,1,2,10,2,0,9,0,0,7,8,0,11,3,1,10,4)
+dfmouseparticipantes_mulheres <- data.frame(mulheres_mouse, row.names = participantes_mulheres)              
+mean(dfmouseparticipantes_mulheres$mulheres_mouse)
+sd(dfmouseparticipantes_mulheres$mulheres_mouse)
+
+
+
+
+participantes_homens <- c('P7','P10','P11','P12','P13','P24','P28','P29','P30','P31','P32','P34','P35','P42','P50','P57','P58','P64','P65','P66','P67','P68','P69','P70')
+homens_mouse <- c(5,1,1,0,1,0,1,2,13,9,2,0,2,4,0,6,6,11,0,0,3,0,7,5)
+dfmouseparticipantes_homens <- data.frame(homens_mouse, row.names = participantes_homens)
+mean(dfmouseparticipantes_homens$homens_mouse)
+sd(dfmouseparticipantes_homens$homens_mouse)
+
+
+participantes_nao_quis_informar <- c('P38', 'P52')
+nao_quis_informar_mouse <- c(3, 3)
+dfnao_quis_informar_mouse <- data.frame(nao_quis_informar_mouse, row.names = participantes_nao_quis_informar)
+mean(dfnao_quis_informar_mouse$nao_quis_informar_mouse)
+sd(dfnao_quis_informar_mouse$nao_quis_informar_mouse)
+
+
+participantes_mulheres <- c('P1','P2','P3','P4','P5','P6','P8','P9','P14','P15','P16','P17','P18','P19','P20','P21','P22','P23','P25','P26','P27','P33','P36','P37','P39','P40','P41','P43','P44','P45','P46','P47','P48','P49','P51','P53','P54','P55','P56','P59','P60','P61','P62','P63')
+mulheres_screen <- c(397,7,174,759,159,153,68,148,253,246,518,95,652,232,314,186,222,236,252,243,99,18,185,323,52,153,111,254,321,450,359,59,36,212,253,62,774,387,150,379,546,281,148,697)
+dfscreenparticipantes_mulheres <- data.frame(mulheres_screen, row.names = participantes_mulheres)              
+mean(dfscreenparticipantes_mulheres$mulheres_screen)
+sd(dfscreenparticipantes_mulheres$mulheres_screen)
+
+
+
+participantes_homens <- c('P7','P10','P11','P12','P13','P24','P28','P29','P30','P31','P32','P34','P35','P42','P50','P57','P58','P64','P65','P66','P67','P68','P69','P70')
+homens_screen <- c(263,97,208,233,77,103,65,259,615,336,150,51,65,234,79,52,238,371,50,137,150,10,240,190)
+dfscreenparticipantes_homens <- data.frame(homens_screen, row.names = participantes_homens)
+mean(dfscreenparticipantes_homens$homens_screen)
+sd(dfscreenparticipantes_homens$homens_screen)

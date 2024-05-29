@@ -1,0 +1,26 @@
+version: '3'
+services:
+  r-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./r_script.R:/r_script.R
+      - ./participantes.csv:/participantes.csv
+    command: ["Rscript", "/r_script.R"]
+    networks:
+      - my_network
+
+  rstudio-container:
+    image: rocker/rstudio
+    environment:
+      PASSWORD: your_password
+    ports:
+      - "8787:8787"
+    networks:
+      - my_network
+    volumes:
+      - ./rstudio_files:/home/rstudio
+
+networks:
+  my_network:
